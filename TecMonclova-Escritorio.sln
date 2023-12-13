@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TecMonclova-Escritorio", "TecMonclova-Escritorio\TecMonclova-Escritorio.csproj", "{A0E130C9-8FAF-460E-B9F0-8C9EAC99C082}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0E130C9-8FAF-460E-B9F0-8C9EAC99C082}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0E130C9-8FAF-460E-B9F0-8C9EAC99C082}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0E130C9-8FAF-460E-B9F0-8C9EAC99C082}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0E130C9-8FAF-460E-B9F0-8C9EAC99C082}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {572D3C3C-EA3B-4548-8E21-F2F010F1E8A1}
+	EndGlobalSection
+EndGlobal
