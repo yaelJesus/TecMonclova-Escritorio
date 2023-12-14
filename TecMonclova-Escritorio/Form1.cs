@@ -90,16 +90,70 @@ namespace TecMonclova_Escritorio
             FormHijo.Show();
             lblInicio.Text = FormHijo.Text;
         }
-        private void BtnAlumno_Click(object sender, EventArgs e)
+        private void btnAlumno_Click(object sender, EventArgs e)
         {
             ActivarBoton(sender, RGBColors.color1);
             AbrirFormularioHijo(new Alumno());
         }
 
-        private void btnPrueba_Click(object sender, EventArgs e)
+        private void btnBecaExterna_Click(object sender, EventArgs e)
+        {
+            ActivarBoton(sender, RGBColors.color1);
+            AbrirFormularioHijo(new BecaExterna());
+        }
+
+        private void btnBecaInstitucional_Click(object sender, EventArgs e)
+        {
+            ActivarBoton(sender, RGBColors.color1);
+            AbrirFormularioHijo(new BecaInstitucional());
+        }
+
+        private void btnDatoFamiliar_Click(object sender, EventArgs e)
         {
             ActivarBoton(sender, RGBColors.color1);
             AbrirFormularioHijo(new DatoFamiliar());
+        }
+
+        private void btnDetalleBecaExterna_Click(object sender, EventArgs e)
+        {
+            ActivarBoton(sender, RGBColors.color1);
+            AbrirFormularioHijo(new DetallesBecaExterna());
+        }
+
+        private void btnDetalleBecaInterna_Click(object sender, EventArgs e)
+        {
+            ActivarBoton(sender, RGBColors.color1);
+            AbrirFormularioHijo(new BecaInterna_Detalles());
+        }
+
+        private void btnEducacion_Click(object sender, EventArgs e)
+        {
+            ActivarBoton(sender, RGBColors.color1);
+            AbrirFormularioHijo(new Educacion());
+        }
+
+        private void btnInscripcion_Click(object sender, EventArgs e)
+        {
+            ActivarBoton(sender, RGBColors.color1);
+            AbrirFormularioHijo(new Inscripcion());
+        }
+
+        private void btnPeriodo_Click(object sender, EventArgs e)
+        {
+            ActivarBoton(sender, RGBColors.color1);
+            AbrirFormularioHijo(new Periodo());
+        }
+
+        private void btnSeguroVida_Click(object sender, EventArgs e)
+        {
+            ActivarBoton(sender, RGBColors.color1);
+            AbrirFormularioHijo(new Seguro_Vida());
+        }
+
+        private void btnUsuario_Click(object sender, EventArgs e)
+        {
+            ActivarBoton(sender, RGBColors.color1);
+            AbrirFormularioHijo(new Usuario());
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
