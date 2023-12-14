@@ -93,8 +93,9 @@ namespace TecMonclova_Escritorio
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Cursor = System.Windows.Forms.Cursors.Default;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(502, 30);
+            this.label5.Location = new System.Drawing.Point(442, 32);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(39, 16);
             this.label5.TabIndex = 231;
@@ -103,9 +104,10 @@ namespace TecMonclova_Escritorio
             // MtlName
             // 
             this.MtlName.BackColor = System.Drawing.Color.White;
+            this.MtlName.Cursor = System.Windows.Forms.Cursors.Default;
             this.MtlName.Depth = 0;
             this.MtlName.Hint = "";
-            this.MtlName.Location = new System.Drawing.Point(143, 23);
+            this.MtlName.Location = new System.Drawing.Point(83, 25);
             this.MtlName.MouseState = MaterialSkin.MouseState.HOVER;
             this.MtlName.Name = "MtlName";
             this.MtlName.PasswordChar = '\0';
@@ -119,9 +121,10 @@ namespace TecMonclova_Escritorio
             // MtlUserName
             // 
             this.MtlUserName.BackColor = System.Drawing.Color.White;
+            this.MtlUserName.Cursor = System.Windows.Forms.Cursors.Default;
             this.MtlUserName.Depth = 0;
             this.MtlUserName.Hint = "";
-            this.MtlUserName.Location = new System.Drawing.Point(357, 23);
+            this.MtlUserName.Location = new System.Drawing.Point(297, 25);
             this.MtlUserName.MouseState = MaterialSkin.MouseState.HOVER;
             this.MtlUserName.Name = "MtlUserName";
             this.MtlUserName.PasswordChar = '\0';
@@ -136,6 +139,7 @@ namespace TecMonclova_Escritorio
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Default;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(126, 79);
             this.label4.Name = "label4";
@@ -147,8 +151,9 @@ namespace TecMonclova_Escritorio
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Default;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(96, 30);
+            this.label3.Location = new System.Drawing.Point(36, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 16);
             this.label3.TabIndex = 227;
@@ -158,8 +163,9 @@ namespace TecMonclova_Escritorio
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Default;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(285, 30);
+            this.label2.Location = new System.Drawing.Point(225, 32);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 16);
             this.label2.TabIndex = 226;
@@ -171,6 +177,7 @@ namespace TecMonclova_Escritorio
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.dataGridView1.Location = new System.Drawing.Point(12, 171);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(742, 207);
@@ -182,6 +189,7 @@ namespace TecMonclova_Escritorio
             this.materialDivider2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.materialDivider2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.materialDivider2.Cursor = System.Windows.Forms.Cursors.Default;
             this.materialDivider2.Depth = 0;
             this.materialDivider2.Location = new System.Drawing.Point(0, 120);
             this.materialDivider2.MouseState = MaterialSkin.MouseState.HOVER;
@@ -193,6 +201,7 @@ namespace TecMonclova_Escritorio
             // MtlPass
             // 
             this.MtlPass.BackColor = System.Drawing.Color.White;
+            this.MtlPass.Cursor = System.Windows.Forms.Cursors.Default;
             this.MtlPass.Depth = 0;
             this.MtlPass.Hint = "";
             this.MtlPass.Location = new System.Drawing.Point(198, 72);
@@ -209,22 +218,24 @@ namespace TecMonclova_Escritorio
             // MtlEmail
             // 
             this.MtlEmail.BackColor = System.Drawing.Color.White;
+            this.MtlEmail.Cursor = System.Windows.Forms.Cursors.Default;
             this.MtlEmail.Depth = 0;
             this.MtlEmail.Hint = "";
-            this.MtlEmail.Location = new System.Drawing.Point(547, 23);
+            this.MtlEmail.Location = new System.Drawing.Point(487, 25);
             this.MtlEmail.MouseState = MaterialSkin.MouseState.HOVER;
             this.MtlEmail.Name = "MtlEmail";
             this.MtlEmail.PasswordChar = '\0';
             this.MtlEmail.SelectedText = "";
             this.MtlEmail.SelectionLength = 0;
             this.MtlEmail.SelectionStart = 0;
-            this.MtlEmail.Size = new System.Drawing.Size(139, 23);
+            this.MtlEmail.Size = new System.Drawing.Size(246, 23);
             this.MtlEmail.TabIndex = 236;
             this.MtlEmail.UseSystemPasswordChar = false;
             // 
             // MtlConfirmPass
             // 
             this.MtlConfirmPass.BackColor = System.Drawing.Color.White;
+            this.MtlConfirmPass.Cursor = System.Windows.Forms.Cursors.Default;
             this.MtlConfirmPass.Depth = 0;
             this.MtlConfirmPass.Hint = "";
             this.MtlConfirmPass.Location = new System.Drawing.Point(472, 72);
@@ -242,6 +253,7 @@ namespace TecMonclova_Escritorio
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Default;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(354, 79);
             this.label1.Name = "label1";
@@ -270,7 +282,7 @@ namespace TecMonclova_Escritorio
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.materialDivider2);
-            this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "Usuario";
             this.Text = "Usuario";
             this.Load += new System.EventHandler(this.Usuario_Load);

@@ -26,7 +26,7 @@ namespace TecMonclova_Escritorio
 
         private void MostrarDatos()
         {
-            DataTable tabla = Conn.ejecutaConsultaSelect("SELECT policyNumber, insuranceCompany, startDate, endDate, beneficiary, deathCoverage, disabilityCoverage, insurancePayment, paymentPeriod FROM LifeInsurance WHERE status = 1");
+            DataTable tabla = Conn.ejecutaConsultaSelect("SELECT idLifeInsurance, policyNumber, insuranceCompany, startDate, endDate, beneficiary, deathCoverage, disabilityCoverage, insurancePayment, paymentPeriod FROM LifeInsurance WHERE status = 1");
             dataGridView1.DataSource = tabla;
         }
 

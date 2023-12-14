@@ -23,7 +23,7 @@ namespace TecMonclova_Escritorio
             MostrarDatos();
             Limpiar();
 
-            DataTable InstitutionalScholarshipTable = Conn.ejecutaConsultaSelect("SELECT idInstitutionalScholarship, name FROM InstitutionalScholarship where status = 1");
+            DataTable InstitutionalScholarshipTable = Conn.ejecutaConsultaSelect("SELECT idInstitutionalScholarship, name FROM [192.168.100.32].SchoolServicesMarisol.dbo.InstitutionalScholarship where status = 1");
             cbInstitutionalScholarship.Items.Clear();
 
             foreach (DataRow row in InstitutionalScholarshipTable.Rows)
@@ -32,7 +32,7 @@ namespace TecMonclova_Escritorio
                 cbInstitutionalScholarship.Items.Add(InstitutionalScholarshipInfo);
             }
 
-            DataTable studentTable = Conn.ejecutaConsultaSelect("SELECT idStudent, name FROM dbo.Student");
+            DataTable studentTable = Conn.ejecutaConsultaSelect("SELECT idStudent, name FROM [192.168.100.32].SchoolServicesMarisol.dbo.Student");
             cbStudent.Items.Clear();
 
             foreach (DataRow row in studentTable.Rows)
@@ -44,7 +44,7 @@ namespace TecMonclova_Escritorio
 
         private void MostrarDatos()
         {
-            DataTable tabla = Conn.ejecutaConsultaSelect("SELECT idInternalScholarshipDetails, idInstitutionalScholarship, idStudent, semester FROM [192.168.100.32].SchoolServicesMarisol.dbo.InstitutionalScholarship WHERE status = 1");
+            DataTable tabla = Conn.ejecutaConsultaSelect("SELECT isd.idInternalScholarshipDetails, isp.name AS [Institutional Scholarship], s.name AS Student, isd.semester FROM [192.168.100.32].SchoolServicesMarisol.dbo.InternalScholarshipDetails isd INNER JOIN [192.168.100.32].SchoolServicesMarisol.dbo.Student s ON isd.idStudent = s.idStudent INNER JOIN [192.168.100.32].SchoolServicesMarisol.dbo.InstitutionalScholarship isp ON isd.idInstitutionalScholarship = isp.idInstitutionalScholarship WHERE isd.status = 1");
             dataGridView1.DataSource = tabla;
         }
 
@@ -123,7 +123,7 @@ namespace TecMonclova_Escritorio
                 for (int i = 0; i < cbSemester.Items.Count; i++)
                 {
                     string[] a = cbSemester.Items[i].ToString().Split('-');
-                    if (dataGridView1.Rows[x].Cells[3].Value.ToString() == a[1])
+                    if (dataGridView1.Rows[x].Cells[3].Value.ToString() == a[0])
                     {
                         cbSemester.SelectedIndex = i;
                     }

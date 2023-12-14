@@ -23,7 +23,7 @@ namespace TecMonclova_Escritorio
             MostrarDatos();
             Limpiar();
 
-            DataTable studentTable = Conn.ejecutaConsultaSelect("SELECT idStudent, name FROM dbo.Student");
+            DataTable studentTable = Conn.ejecutaConsultaSelect("SELECT idStudent, name FROM [192.168.100.32].SchoolServicesMarisol.dbo.Student");
             cbStudent.Items.Clear();
 
             foreach (DataRow row in studentTable.Rows)
@@ -35,7 +35,7 @@ namespace TecMonclova_Escritorio
 
         private void MostrarDatos()
         {
-            DataTable tabla = Conn.ejecutaConsultaSelect("SELECT f.idFamilyData, f.name, f.lastName, f.relationship, s.name as Student, f.phoneNumber, f.email, f.address from FamilyData f inner join Student s on f.idStudent = s.idStudent WHERE f.status = 1");
+            DataTable tabla = Conn.ejecutaConsultaSelect("SELECT f.idFamilyData, f.name, f.lastName, f.relationship, s.name as Student, f.phoneNumber, f.email, f.address from FamilyData f inner join [192.168.100.32].SchoolServicesMarisol.dbo.Student s on f.idStudent = s.idStudent WHERE f.status = 1");
             dataGridView1.DataSource = tabla;
         }
 

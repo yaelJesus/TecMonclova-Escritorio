@@ -26,7 +26,7 @@ namespace TecMonclova_Escritorio
 
         private void MostrarDatos()
         {
-            DataTable tabla = Conn.ejecutaConsultaSelect("SELECT userName, name, CONCAT('********', SUBSTRING(password, 0, 1)) AS password, email FROM [User] WHERE status = 1");
+            DataTable tabla = Conn.ejecutaConsultaSelect("SELECT idUser, userName, name, CONCAT('********', SUBSTRING(password, 0, 1)) AS password, email FROM [User] WHERE status = 1");
             dataGridView1.DataSource = tabla;
         }
 

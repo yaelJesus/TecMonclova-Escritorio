@@ -23,13 +23,22 @@ namespace TecMonclova_Escritorio
             MostrarDatos();
             Limpiar();
 
-            DataTable studentTable = Conn.ejecutaConsultaSelect("SELECT idStudent, name FROM dbo.Student");
+            DataTable studentTable = Conn.ejecutaConsultaSelect("SELECT idStudent, name FROM [192.168.100.32].SchoolServicesMarisol.dbo.Student");
             cbStudent.Items.Clear();
 
             foreach (DataRow row in studentTable.Rows)
             {
                 string studentInfo = $"{row["idStudent"]}-{row["name"]}";
                 cbStudent.Items.Add(studentInfo);
+            }
+
+            DataTable periodTable = Conn.ejecutaConsultaSelect("SELECT idPeriod, name FROM Period");
+            cbPeriod.Items.Clear();
+
+            foreach (DataRow row in periodTable.Rows)
+            {
+                string periodInfo = $"{row["idPeriod"]}-{row["name"]}";
+                cbPeriod.Items.Add(periodInfo);
             }
         }
 
@@ -114,7 +123,7 @@ namespace TecMonclova_Escritorio
                 for (int i = 0; i < cbSemester.Items.Count; i++)
                 {
                     string[] a = cbSemester.Items[i].ToString().Split('-');
-                    if (dataGridView1.Rows[x].Cells[5].Value.ToString() == a[1])
+                    if (dataGridView1.Rows[x].Cells[5].Value.ToString() == a[0])
                     {
                         cbSemester.SelectedIndex = i;
                     }

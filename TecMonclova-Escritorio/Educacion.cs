@@ -23,7 +23,7 @@ namespace TecMonclova_Escritorio
             MostrarDatos();
             Limpiar();
 
-            DataTable studentTable = Conn.ejecutaConsultaSelect("SELECT idStudent, name FROM dbo.Student");
+            DataTable studentTable = Conn.ejecutaConsultaSelect("SELECT idStudent, name FROM [192.168.100.32].SchoolServicesMarisol.dbo.Student");
             cbStudent.Items.Clear();
 
             foreach (DataRow row in studentTable.Rows)

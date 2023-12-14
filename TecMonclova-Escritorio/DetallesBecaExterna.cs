@@ -23,7 +23,7 @@ namespace TecMonclova_Escritorio
             MostrarDatos();
             Limpiar();
 
-            DataTable ExternalScholarshipTable = Conn.ejecutaConsultaSelect("SELECT idExternalScholarship, scholarshipName FROM ExternalScholarship where status = 1");
+            DataTable ExternalScholarshipTable = Conn.ejecutaConsultaSelect("SELECT idExternalScholarship, scholarshipName FROM [192.168.100.32].SchoolServicesMarisol.dbo.ExternalScholarship where status = 1");
             cbExternalScholarship.Items.Clear();
 
             foreach (DataRow row in ExternalScholarshipTable.Rows)
@@ -32,7 +32,7 @@ namespace TecMonclova_Escritorio
                 cbExternalScholarship.Items.Add(ExternalScholarshipInfo);
             }
 
-            DataTable studentTable = Conn.ejecutaConsultaSelect("SELECT idStudent, name FROM dbo.Student");
+            DataTable studentTable = Conn.ejecutaConsultaSelect("SELECT idStudent, name FROM [192.168.100.32].SchoolServicesMarisol.dbo.Student");
             cbStudent.Items.Clear();
 
             foreach (DataRow row in studentTable.Rows)
@@ -44,7 +44,7 @@ namespace TecMonclova_Escritorio
 
         private void MostrarDatos()
         {
-            DataTable tabla = Conn.ejecutaConsultaSelect("SELECT idExternalScholarshipDetails, idStudent, idExternalScholarship, institution, campus, major, semester FROM [192.168.100.32].SchoolServicesMarisol.dbo.ExternalScholarshipDetails WHERE status = 1");
+            DataTable tabla = Conn.ejecutaConsultaSelect("SELECT esd.idExternalScholarshipDetails, s.name AS Student, es.scholarshipName AS [External Scholarship], esd.institution, esd.campus, esd.major, esd.semester FROM [192.168.100.32].SchoolServicesMarisol.dbo.ExternalScholarshipDetails esd INNER JOIN [192.168.100.32].SchoolServicesMarisol.dbo.Student s ON esd.idStudent = s.idStudent INNER JOIN [192.168.100.32].SchoolServicesMarisol.dbo.ExternalScholarship es ON esd.idExternalScholarship = es.idExternalScholarship WHERE esd.status = 1");
             dataGridView1.DataSource = tabla;
         }
 
@@ -135,7 +135,7 @@ namespace TecMonclova_Escritorio
                 for (int i = 0; i < cbSemester.Items.Count; i++)
                 {
                     string[] a = cbSemester.Items[i].ToString().Split('-');
-                    if (dataGridView1.Rows[x].Cells[6].Value.ToString() == a[1])
+                    if (dataGridView1.Rows[x].Cells[6].Value.ToString() == a[0])
                     {
                         cbSemester.SelectedIndex = i;
                     }
