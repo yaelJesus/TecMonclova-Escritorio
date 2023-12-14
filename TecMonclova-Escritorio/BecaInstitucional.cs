@@ -42,7 +42,9 @@ namespace TecMonclova_Escritorio
             string name = MtlName.Text;
             string percentage = MtlPercentage.Text;
             string requirements = MtlRequirements.Text;
-            consulta = "INSERT INTO [192.168.100.32].SchoolServicesMarisol.dbo.InstitutionalScholarship  name, percentage, requirements, idUserCreate, creationDate) VALUES('" + name + "', '" + percentage + "', '" + requirements + "' 1, '2023-12-13')";
+            string idUserCreate = UserCache.IdUser.ToString();
+            string creationDate = DateTime.Today.ToString("yyyy-MM-dd");
+            consulta = "INSERT INTO [192.168.100.32].SchoolServicesMarisol.dbo.InstitutionalScholarship  name, percentage, requirements, idUserCreate, creationDate) VALUES('" + name + "', '" + percentage + "', '" + requirements + "', " + idUserCreate + ", '" + creationDate + "')";
             Conn.ejecutaConsulta(consulta);
             MostrarDatos();
             Limpiar();
@@ -53,9 +55,11 @@ namespace TecMonclova_Escritorio
             string name = MtlName.Text;
             string percentage = MtlPercentage.Text;
             string requirements = MtlRequirements.Text;
+            string idUserModify = UserCache.IdUser.ToString();
+            string modifiedDate = DateTime.Today.ToString("yyyy-MM-dd");
             int a = dataGridView1.CurrentCell.RowIndex;
             int idInstitutionalScholarship = (int)dataGridView1.Rows[a].Cells[0].Value;
-            consulta = "UPDATE [192.168.100.32].SchoolServicesMarisol.dbo.InstitutionalScholarship SET name = '" + name + "', percentage = '" + percentage + "', requirements = '" + requirements + "' WHERE idInstitutionalScholarship =  " + idInstitutionalScholarship;
+            consulta = "UPDATE [192.168.100.32].SchoolServicesMarisol.dbo.InstitutionalScholarship SET name = '" + name + "', percentage = '" + percentage + "', requirements = '" + requirements + "', idUserModify = " + idUserModify + ", modifiedDate = '" + modifiedDate + "' WHERE idInstitutionalScholarship =  " + idInstitutionalScholarship;
             Conn.ejecutaConsulta(consulta);
             MostrarDatos();
             Limpiar();

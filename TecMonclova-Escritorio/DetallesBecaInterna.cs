@@ -57,12 +57,14 @@ namespace TecMonclova_Escritorio
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            string idUserCreate = UserCache.IdUser.ToString();
+            string creationDate = DateTime.Today.ToString("yyyy-MM-dd");
             string[] x = cbInstitutionalScholarship.Text.Split('-');
             string idInstitutionalScholarship = x[0];
             x = cbStudent.Text.Split('-');
             string idStudent = x[0];
             string semester = cbSemester.Text;
-            consulta = "INSERT INTO [192.168.100.32].SchoolServicesMarisol.dbo.InternalScholarshipDetails  idInstitutionalScholarship, idStudent, semester, idUserCreate, creationDate) VALUES(" + idInstitutionalScholarship + ", " + idStudent + ", " + semester + " 1, '2023-12-13')";
+            consulta = "INSERT INTO [192.168.100.32].SchoolServicesMarisol.dbo.InternalScholarshipDetails  idInstitutionalScholarship, idStudent, semester, idUserCreate, creationDate) VALUES(" + idInstitutionalScholarship + ", " + idStudent + ", " + semester + ", " + idUserCreate + ", '" + creationDate + "')";
             Conn.ejecutaConsulta(consulta);
             MostrarDatos();
             Limpiar();
@@ -70,6 +72,8 @@ namespace TecMonclova_Escritorio
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            string idUserModify = UserCache.IdUser.ToString();
+            string modifiedDate = DateTime.Today.ToString("yyyy-MM-dd");
             string[] x = cbStudent.Text.Split('-');
             string idInstitutionalScholarship = x[0];
             x = cbStudent.Text.Split('-');
@@ -77,7 +81,7 @@ namespace TecMonclova_Escritorio
             string semester = cbSemester.Text;
             int a = dataGridView1.CurrentCell.RowIndex;
             int idInternalScholarshipDetails = (int)dataGridView1.Rows[a].Cells[0].Value;
-            consulta = "UPDATE [192.168.100.32].SchoolServicesMarisol.dbo.InternalScholarshipDetails SET idInstitutionalScholarship = " + idInstitutionalScholarship + ", idStudent = " + idStudent + ", semester = " + semester + " WHERE idInternalScholarshipDetails =  " + idInternalScholarshipDetails;
+            consulta = "UPDATE [192.168.100.32].SchoolServicesMarisol.dbo.InternalScholarshipDetails SET idInstitutionalScholarship = " + idInstitutionalScholarship + ", idStudent = " + idStudent + ", semester = " + semester + ", idUserModify = " + idUserModify + ", modifiedDate = '" + modifiedDate + "' WHERE idInternalScholarshipDetails =  " + idInternalScholarshipDetails;
             Conn.ejecutaConsulta(consulta);
             MostrarDatos();
             Limpiar();

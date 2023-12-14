@@ -74,11 +74,13 @@ namespace TecMonclova_Escritorio
             string curp = MtlCURP.Text;
             string rfc = MtlRFC.Text;
             string nss = MtlNSS.Text;
+            string idUserCreate = UserCache.IdUser.ToString();
+            string creationDate = DateTime.Today.ToString("yyyy-MM-dd");
             string[] x = cbStudyPlan.Text.Split('-');
             string idStudyPlan = x[0];
             x = cbLifeInsurance.Text.Split('-');
             string idLifeInsurance = x[0];
-            consulta = "INSERT INTO [192.168.100.32].SchoolServicesMarisol.dbo.Student (idStudyPlan, registrationNumber, name, lastName, phoneNumber, email, address, curp, rfc, nss, idLifeInsurance, idUserCreate,creationDate) values(" + idStudyPlan + ", '" + registrationNumber + "', '" + name + "', '" + lastName + "', '" + phoneNumber + "', '" + email + "', '" + address + "', '" + curp + "', '" + rfc + "', '" + nss + "', " + idLifeInsurance + ", 1, '2023-12-13')";
+            consulta = "INSERT INTO [192.168.100.32].SchoolServicesMarisol.dbo.Student (idStudyPlan, registrationNumber, name, lastName, phoneNumber, email, address, curp, rfc, nss, idLifeInsurance, idUserCreate, creationDate) values(" + idStudyPlan + ", '" + registrationNumber + "', '" + name + "', '" + lastName + "', '" + phoneNumber + "', '" + email + "', '" + address + "', '" + curp + "', '" + rfc + "', '" + nss + "', " + idLifeInsurance + ", " + idUserCreate + ", '" + creationDate + "')";
             Conn.ejecutaConsulta(consulta);
             MostrarDatos();
             Limpiar();
@@ -95,13 +97,15 @@ namespace TecMonclova_Escritorio
             string curp = MtlCURP.Text;
             string rfc = MtlRFC.Text;
             string nss = MtlNSS.Text;
+            string idUserModify = UserCache.IdUser.ToString();
+            string modifiedDate = DateTime.Today.ToString("yyyy-MM-dd");
             string[] x = cbStudyPlan.Text.Split('-');
             string idStudyPlan = x[0];
             x = cbStudyPlan.Text.Split('-');
             string idLifeInsurance = x[0];
             int a = dataGridView1.CurrentCell.RowIndex;
             int idStudent = (int)dataGridView1.Rows[a].Cells[0].Value;
-            consulta = "UPDATE [192.168.100.32].SchoolServicesMarisol.dbo.Student SET idStudyPlan = " + idStudyPlan + ", registrationNumber = '" + registrationNumber + "', name = '" + name + "', lastName = '" + lastName + "', phoneNumber = '" + phoneNumber + "', email ='" + email + "', address = '" + address + "', curp = '" + curp + "', rfc = '" + rfc + "', nss = '" + nss + "', idLifeInsurance = " + idLifeInsurance + " WHERE idStudent =  " + idStudent;
+            consulta = "UPDATE [192.168.100.32].SchoolServicesMarisol.dbo.Student SET idStudyPlan = " + idStudyPlan + ", registrationNumber = '" + registrationNumber + "', name = '" + name + "', lastName = '" + lastName + "', phoneNumber = '" + phoneNumber + "', email ='" + email + "', address = '" + address + "', curp = '" + curp + "', rfc = '" + rfc + "', nss = '" + nss + "', idLifeInsurance = " + idLifeInsurance + ", idUserModify = " + idUserModify + ", modifiedDate = '" + modifiedDate + "' WHERE idStudent =  " + idStudent;
             Conn.ejecutaConsulta(consulta);
             MostrarDatos();
             Limpiar();
@@ -114,6 +118,7 @@ namespace TecMonclova_Escritorio
             consulta = "UPDATE [192.168.100.32].SchoolServicesMarisol.dbo.Student SET Status = 0 WHERE idStudent =  " + idStudent; ;
             Conn.ejecutaConsulta(consulta);
             MostrarDatos();
+            Limpiar();
         }
 
         bool tru = false;

@@ -52,9 +52,11 @@ namespace TecMonclova_Escritorio
             string educationLevel = MtlEducationLevel.Text;
             string startDate = dtpStartDate.Value.ToString("yyyy-MM-dd");
             string endDate = dtpEndDate.Value.ToString("yyyy-MM-dd");
+            string idUserCreate = UserCache.IdUser.ToString();
+            string creationDate = DateTime.Today.ToString("yyyy-MM-dd");
             string[] x = cbStudent.Text.Split('-');
             string idStudent = x[0];
-            consulta = "INSERT INTO Period (educationLevel, startDate, endDate, idStudent, idUserCreate, creationDate) VALUES ('" + educationLevel + "', '" + startDate + "', '" + endDate + "', " + idStudent + ", 1, '2023-10-23')";
+            consulta = "INSERT INTO Period (educationLevel, startDate, endDate, idStudent, idUserCreate, creationDate) VALUES ('" + educationLevel + "', '" + startDate + "', '" + endDate + "', " + idStudent + ", " + idUserCreate + ", '" + creationDate + "')";
             Conn.ejecutaConsulta(consulta);
             MostrarDatos();
             Limpiar();
@@ -65,11 +67,13 @@ namespace TecMonclova_Escritorio
             string educationLevel = MtlEducationLevel.Text;
             string startDate = dtpStartDate.Value.ToString("yyyy-MM-dd");
             string endDate = dtpEndDate.Value.ToString("yyyy-MM-dd");
+            string idUserModify = UserCache.IdUser.ToString();
+            string modifiedDate = DateTime.Today.ToString("yyyy-MM-dd");
             string[] x = cbStudent.Text.Split('-');
             string idStudent = x[0];
             int a = dataGridView1.CurrentCell.RowIndex;
             int idEducation = (int)dataGridView1.Rows[a].Cells[0].Value;
-            consulta = "UPDATE Education SET educationLevel = '" + educationLevel + "', startDate = '" + startDate + "', endDate = '" + endDate + "', idStudent = " + idStudent + " WHERE idEducation = " + idEducation;
+            consulta = "UPDATE Education SET educationLevel = '" + educationLevel + "', startDate = '" + startDate + "', endDate = '" + endDate + "', idStudent = " + idStudent + ", idUserModify = " + idUserModify + ", modifiedDate = '" + modifiedDate + "' WHERE idEducation = " + idEducation;
             Conn.ejecutaConsulta(consulta);
             MostrarDatos();
             Limpiar();

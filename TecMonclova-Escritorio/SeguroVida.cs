@@ -54,7 +54,9 @@ namespace TecMonclova_Escritorio
             string disabilityCoverage = MtlDisabilityCoverage.Text;
             string insurancePayment = MtlInsurancePayment.Text;
             string paymentPeriod = MtlPaymentPeriod.Text;
-            consulta = "INSERT INTO LifeInsurance (idLifeInsurance, policyNumber, insuranceCompany, startDate, endDate, beneficiary, deathCoverage, disabilityCoverage, insurancePayment, paymentPeriod, idUserCreate, creationDate) VALUES('" + policyNumber + "', '" + insuranceCompany + "', '" + startDate + "', '" + endDate + "', '" + beneficiary + "', " + deathCoverage + ", " + disabilityCoverage + ", " + insurancePayment + ", " + paymentPeriod + ", 1, '2023-10-23')";
+            string idUserCreate = UserCache.IdUser.ToString();
+            string creationDate = DateTime.Today.ToString("yyyy-MM-dd");
+            consulta = "INSERT INTO LifeInsurance (idLifeInsurance, policyNumber, insuranceCompany, startDate, endDate, beneficiary, deathCoverage, disabilityCoverage, insurancePayment, paymentPeriod, idUserCreate, creationDate) VALUES('" + policyNumber + "', '" + insuranceCompany + "', '" + startDate + "', '" + endDate + "', '" + beneficiary + "', " + deathCoverage + ", " + disabilityCoverage + ", " + insurancePayment + ", " + paymentPeriod + ", " + idUserCreate + ", '" + creationDate + "')";
             Conn.ejecutaConsulta(consulta);
             MostrarDatos();
             Limpiar();
@@ -71,9 +73,11 @@ namespace TecMonclova_Escritorio
             string disabilityCoverage = MtlDisabilityCoverage.Text;
             string insurancePayment = MtlInsurancePayment.Text;
             string paymentPeriod = MtlPaymentPeriod.Text;
+            string idUserModify = UserCache.IdUser.ToString();
+            string modifiedDate = DateTime.Today.ToString("yyyy-MM-dd");
             int a = dataGridView1.CurrentCell.RowIndex;
             int idLifeInsurance = (int)dataGridView1.Rows[a].Cells[0].Value;
-            consulta = "UPDATE LifeInsurance SET policyNumber = '" + policyNumber + "', insuranceCompany = '" + insuranceCompany + "', startDate = '" + startDate + "', endDate = '" + endDate + "', beneficiary = '" + beneficiary + "', deathCoverage = " + deathCoverage + ", disabilityCoverage = " + disabilityCoverage + ", insurancePayment = " + insurancePayment + ", paymentPeriod = " + paymentPeriod + " WHERE idLifeInsurance = " + idLifeInsurance;
+            consulta = "UPDATE LifeInsurance SET policyNumber = '" + policyNumber + "', insuranceCompany = '" + insuranceCompany + "', startDate = '" + startDate + "', endDate = '" + endDate + "', beneficiary = '" + beneficiary + "', deathCoverage = " + deathCoverage + ", disabilityCoverage = " + disabilityCoverage + ", insurancePayment = " + insurancePayment + ", paymentPeriod = " + paymentPeriod + ", idUserModify = " + idUserModify + ", modifiedDate = '" + modifiedDate + "' WHERE idLifeInsurance = " + idLifeInsurance;
             Conn.ejecutaConsulta(consulta);
             MostrarDatos();
             Limpiar();

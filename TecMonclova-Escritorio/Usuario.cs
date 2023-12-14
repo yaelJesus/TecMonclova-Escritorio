@@ -45,6 +45,8 @@ namespace TecMonclova_Escritorio
             string name = MtlName.Text;
             string email = MtlEmail.Text;
             string password = "";
+            string idUserCreate = UserCache.IdUser.ToString();
+            string creationDate = DateTime.Today.ToString("yyyy-MM-dd");
             if (MtlPass.Text == MtlConfirmPass.Text)
                 password = MtlPass.Text;
             else
@@ -52,7 +54,7 @@ namespace TecMonclova_Escritorio
                 MessageBox.Show("Las contraseñas no cinciden, por favor vuelva a intentar", "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            consulta = "INSERT INTO [User] (userName, name, password, email, idUserCreate, creationDate) VALUES ('" + userName + "', '" + name + "', '" + password + "', '" + email + "', 1, '2023-10-23')";
+            consulta = "INSERT INTO [User] (userName, name, password, email, idUserCreate, creationDate) VALUES ('" + userName + "', '" + name + "', '" + password + "', '" + email + "', " + idUserCreate + ", '" + creationDate + "')";
             Conn.ejecutaConsulta(consulta);
             MostrarDatos();
             Limpiar();
@@ -64,6 +66,8 @@ namespace TecMonclova_Escritorio
             string name = MtlName.Text;
             string email = MtlEmail.Text;
             string password = "";
+            string idUserModify = UserCache.IdUser.ToString();
+            string modifiedDate = DateTime.Today.ToString("yyyy-MM-dd");
             if (MtlPass.Text == MtlConfirmPass.Text)
                 password = MtlPass.Text;
             else
@@ -73,7 +77,7 @@ namespace TecMonclova_Escritorio
             }
             int a = dataGridView1.CurrentCell.RowIndex;
             int idUser = (int)dataGridView1.Rows[a].Cells[0].Value;
-            consulta = "UPDATE [User] SET userName = '" + userName + "', name = '" + name + "', password = '" + password + "', email = '" + email + "' WHERE idUser = " + idUser;
+            consulta = "UPDATE [User] SET userName = '" + userName + "', name = '" + name + "', password = '" + password + "', email = '" + email + "', idUserModify = " + idUserModify + ", modifiedDate = '" + modifiedDate + "' WHERE idUser = " + idUser;
             Conn.ejecutaConsulta(consulta);
             MostrarDatos();
             Limpiar();

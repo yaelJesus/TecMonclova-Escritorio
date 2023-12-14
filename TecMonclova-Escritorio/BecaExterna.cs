@@ -42,7 +42,9 @@ namespace TecMonclova_Escritorio
             string scholarshipName = MtlScholarshipName.Text;
             string amount = MtlAmount.Text;
             string paymentDate = dtpPaymentDate.Value.ToString("yyyy-MM-dd");
-            consulta = "INSERT INTO [192.168.100.32].SchoolServicesMarisol.dbo.ExternalScholarship  scholarshipName, amount, paymentDate, idUserCreate, creationDate) VALUES('" + scholarshipName + "', " + amount + ", '" + paymentDate + "' 1, '2023-12-13')";
+            string idUserCreate = UserCache.IdUser.ToString();
+            string creationDate = DateTime.Today.ToString("yyyy-MM-dd");
+            consulta = "INSERT INTO [192.168.100.32].SchoolServicesMarisol.dbo.ExternalScholarship  scholarshipName, amount, paymentDate, idUserCreate, creationDate) VALUES('" + scholarshipName + "', " + amount + ", '" + paymentDate + "', " + idUserCreate + ", '" + creationDate + "')";
             Conn.ejecutaConsulta(consulta);
             MostrarDatos();
             Limpiar();
@@ -53,9 +55,11 @@ namespace TecMonclova_Escritorio
             string scholarshipName = MtlScholarshipName.Text;
             string amount = MtlAmount.Text;
             string paymentDate = dtpPaymentDate.Value.ToString("yyyy-MM-dd");
+            string idUserModify = UserCache.IdUser.ToString();
+            string modifiedDate = DateTime.Today.ToString("yyyy-MM-dd");
             int a = dataGridView1.CurrentCell.RowIndex;
             int idExternalScholarship = (int)dataGridView1.Rows[a].Cells[0].Value;
-            consulta = "UPDATE [192.168.100.32].SchoolServicesMarisol.dbo.ExternalScholarship SET scholarshipName = '" + scholarshipName + "', amount = " + amount + ", paymentDate = '" + paymentDate + "' WHERE idExternalScholarship =  " + idExternalScholarship;
+            consulta = "UPDATE [192.168.100.32].SchoolServicesMarisol.dbo.ExternalScholarship SET scholarshipName = '" + scholarshipName + "', amount = " + amount + ", paymentDate = '" + paymentDate + "', idUserModify = " + idUserModify + ", modifiedDate = '" + modifiedDate + "' WHERE idExternalScholarship =  " + idExternalScholarship;
             Conn.ejecutaConsulta(consulta);
             MostrarDatos();
             Limpiar();

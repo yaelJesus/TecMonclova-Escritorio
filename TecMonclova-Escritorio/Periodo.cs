@@ -44,7 +44,9 @@ namespace TecMonclova_Escritorio
             string duration = MtlDuration.Text;
             string startDate = dtpStartDate.Value.ToString("yyyy-MM-dd");
             string endDate = dtpEndDate.Value.ToString("yyyy-MM-dd");
-            consulta = "INSERT INTO Period (name, duration, startDate, endDate, idUserCreate, creationDate) VALUES ('" + name + "', " + duration + ", '" + startDate + "', '" + endDate + "', 1, '2023-10-23')";
+            string idUserCreate = UserCache.IdUser.ToString();
+            string creationDate = DateTime.Today.ToString("yyyy-MM-dd");
+            consulta = "INSERT INTO Period (name, duration, startDate, endDate, idUserCreate, creationDate) VALUES ('" + name + "', " + duration + ", '" + startDate + "', '" + endDate + "', " + idUserCreate + ", '" + creationDate + "')";
             Conn.ejecutaConsulta(consulta);
             MostrarDatos();
             Limpiar();
@@ -56,9 +58,11 @@ namespace TecMonclova_Escritorio
             string duration = MtlDuration.Text;
             string startDate = dtpStartDate.Value.ToString("yyyy-MM-dd");
             string endDate = dtpEndDate.Value.ToString("yyyy-MM-dd");
+            string idUserModify = UserCache.IdUser.ToString();
+            string modifiedDate = DateTime.Today.ToString("yyyy-MM-dd");
             int a = dataGridView1.CurrentCell.RowIndex;
             int idPeriod = (int)dataGridView1.Rows[a].Cells[0].Value;
-            consulta = "UPDATE Period SET name = '" + name + "', duration = " + duration + ", startDate = '" + startDate + "', endDate = '" + endDate + "' WHERE idPeriod =  " + idPeriod;
+            consulta = "UPDATE Period SET name = '" + name + "', duration = " + duration + ", startDate = '" + startDate + "', endDate = '" + endDate + "', idUserModify = " + idUserModify + ", modifiedDate = '" + modifiedDate + "' WHERE idPeriod =  " + idPeriod;
             Conn.ejecutaConsulta(consulta);
             MostrarDatos();
             Limpiar();

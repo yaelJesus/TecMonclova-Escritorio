@@ -63,12 +63,14 @@ namespace TecMonclova_Escritorio
             string institution = MtlInstitution.Text;
             string campus = MtlCampus.Text;
             string major = MtlMajor.Text;
+            string idUserCreate = UserCache.IdUser.ToString();
+            string creationDate = DateTime.Today.ToString("yyyy-MM-dd");
             string[] x = cbExternalScholarship.Text.Split('-');
             string idExternalScholarship = x[0];
             x = cbStudent.Text.Split('-');
             string idStudent = x[0];
             string semester = cbSemester.Text;
-            consulta = "INSERT INTO [192.168.100.32].SchoolServicesMarisol.dbo.ExternalScholarshipDetails (idStudent, idExternalScholarship, institution, campus, major, semester, idUserCreate, creationDate) VALUES(" + idStudent + ", " + idExternalScholarship + ", '" + institution + "', '" + campus + "', '" + major + "', " + semester + " 1, '2023-12-13')";
+            consulta = "INSERT INTO [192.168.100.32].SchoolServicesMarisol.dbo.ExternalScholarshipDetails (idStudent, idExternalScholarship, institution, campus, major, semester, idUserCreate, creationDate) VALUES(" + idStudent + ", " + idExternalScholarship + ", '" + institution + "', '" + campus + "', '" + major + "', " + semester + ", " + idUserCreate + ", '" + creationDate + "')";
             Conn.ejecutaConsulta(consulta);
             MostrarDatos();
             Limpiar();
@@ -79,6 +81,8 @@ namespace TecMonclova_Escritorio
             string institution = MtlInstitution.Text;
             string campus = MtlCampus.Text;
             string major = MtlMajor.Text;
+            string idUserModify = UserCache.IdUser.ToString();
+            string modifiedDate = DateTime.Today.ToString("yyyy-MM-dd");
             string[] x = cbExternalScholarship.Text.Split('-');
             string idExternalScholarship = x[0];
             x = cbStudent.Text.Split('-');
@@ -86,7 +90,7 @@ namespace TecMonclova_Escritorio
             string semester = cbSemester.Text;
             int a = dataGridView1.CurrentCell.RowIndex;
             int idExternalScholarshipDetails = (int)dataGridView1.Rows[a].Cells[0].Value;
-            consulta = "UPDATE [192.168.100.32].SchoolServicesMarisol.dbo.ExternalScholarshipDetails SET idStudent = " + idStudent + ", idExternalScholarship = " + idExternalScholarship + ", institution = '" + institution + "', campus = '" + campus + "', major = '" + major + "', semester = " + semester + " WHERE idExternalScholarshipDetails =  " + idExternalScholarshipDetails;
+            consulta = "UPDATE [192.168.100.32].SchoolServicesMarisol.dbo.ExternalScholarshipDetails SET idStudent = " + idStudent + ", idExternalScholarship = " + idExternalScholarship + ", institution = '" + institution + "', campus = '" + campus + "', major = '" + major + "', semester = " + semester + ", idUserModify = " + idUserModify + ", modifiedDate = '" + modifiedDate + "' WHERE idExternalScholarshipDetails =  " + idExternalScholarshipDetails;
             Conn.ejecutaConsulta(consulta);
             MostrarDatos();
             Limpiar();
