@@ -11,9 +11,9 @@ namespace TecMonclova_Escritorio
         public static SqlConnection conexion = new SqlConnection();
 
         static string servidor = "localhost";
-        static string bd = "SchoolServices";
+        static string bd = "SchoolServicesYael";
         static string ususario = "sa";
-        static string password = "1234";
+        static string password = "123456";
 
         static String cadenaConexion = "server=" + servidor + ";" + "user id =" + ususario + ";" + "password=" + password + ";" + "database=" + bd + ";";
 

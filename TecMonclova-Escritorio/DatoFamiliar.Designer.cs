@@ -30,18 +30,18 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
-            this.MaterialPhone = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.MtlPhone = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.label5 = new System.Windows.Forms.Label();
-            this.MaterialAddress = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.MaterialRelationship = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.MaterialLastName = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.MaterialName = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.MtlAddress = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.MtlRelationship = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.MtlLastName = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.MtlName = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.MaterialEmail = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.MtlEmail = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.label8 = new System.Windows.Forms.Label();
             this.cbStudent = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -75,21 +75,21 @@
             this.materialDivider2.TabIndex = 61;
             this.materialDivider2.Text = "materialDivider2";
             // 
-            // MaterialPhone
+            // MtlPhone
             // 
-            this.MaterialPhone.BackColor = System.Drawing.Color.White;
-            this.MaterialPhone.Depth = 0;
-            this.MaterialPhone.Hint = "";
-            this.MaterialPhone.Location = new System.Drawing.Point(85, 54);
-            this.MaterialPhone.MouseState = MaterialSkin.MouseState.HOVER;
-            this.MaterialPhone.Name = "MaterialPhone";
-            this.MaterialPhone.PasswordChar = '\0';
-            this.MaterialPhone.SelectedText = "";
-            this.MaterialPhone.SelectionLength = 0;
-            this.MaterialPhone.SelectionStart = 0;
-            this.MaterialPhone.Size = new System.Drawing.Size(151, 23);
-            this.MaterialPhone.TabIndex = 86;
-            this.MaterialPhone.UseSystemPasswordChar = false;
+            this.MtlPhone.BackColor = System.Drawing.Color.White;
+            this.MtlPhone.Depth = 0;
+            this.MtlPhone.Hint = "";
+            this.MtlPhone.Location = new System.Drawing.Point(85, 54);
+            this.MtlPhone.MouseState = MaterialSkin.MouseState.HOVER;
+            this.MtlPhone.Name = "MtlPhone";
+            this.MtlPhone.PasswordChar = '\0';
+            this.MtlPhone.SelectedText = "";
+            this.MtlPhone.SelectionLength = 0;
+            this.MtlPhone.SelectionStart = 0;
+            this.MtlPhone.Size = new System.Drawing.Size(151, 23);
+            this.MtlPhone.TabIndex = 86;
+            this.MtlPhone.UseSystemPasswordChar = false;
             // 
             // label5
             // 
@@ -102,69 +102,69 @@
             this.label5.TabIndex = 84;
             this.label5.Text = "Phone";
             // 
-            // MaterialAddress
+            // MtlAddress
             // 
-            this.MaterialAddress.BackColor = System.Drawing.Color.White;
-            this.MaterialAddress.Depth = 0;
-            this.MaterialAddress.Hint = "";
-            this.MaterialAddress.Location = new System.Drawing.Point(171, 83);
-            this.MaterialAddress.MouseState = MaterialSkin.MouseState.HOVER;
-            this.MaterialAddress.Name = "MaterialAddress";
-            this.MaterialAddress.PasswordChar = '\0';
-            this.MaterialAddress.SelectedText = "";
-            this.MaterialAddress.SelectionLength = 0;
-            this.MaterialAddress.SelectionStart = 0;
-            this.MaterialAddress.Size = new System.Drawing.Size(458, 23);
-            this.MaterialAddress.TabIndex = 79;
-            this.MaterialAddress.UseSystemPasswordChar = false;
+            this.MtlAddress.BackColor = System.Drawing.Color.White;
+            this.MtlAddress.Depth = 0;
+            this.MtlAddress.Hint = "";
+            this.MtlAddress.Location = new System.Drawing.Point(171, 83);
+            this.MtlAddress.MouseState = MaterialSkin.MouseState.HOVER;
+            this.MtlAddress.Name = "MtlAddress";
+            this.MtlAddress.PasswordChar = '\0';
+            this.MtlAddress.SelectedText = "";
+            this.MtlAddress.SelectionLength = 0;
+            this.MtlAddress.SelectionStart = 0;
+            this.MtlAddress.Size = new System.Drawing.Size(458, 23);
+            this.MtlAddress.TabIndex = 79;
+            this.MtlAddress.UseSystemPasswordChar = false;
             // 
-            // MaterialRelationship
+            // MtlRelationship
             // 
-            this.MaterialRelationship.BackColor = System.Drawing.Color.White;
-            this.MaterialRelationship.Depth = 0;
-            this.MaterialRelationship.Hint = "";
-            this.MaterialRelationship.Location = new System.Drawing.Point(610, 25);
-            this.MaterialRelationship.MouseState = MaterialSkin.MouseState.HOVER;
-            this.MaterialRelationship.Name = "MaterialRelationship";
-            this.MaterialRelationship.PasswordChar = '\0';
-            this.MaterialRelationship.SelectedText = "";
-            this.MaterialRelationship.SelectionLength = 0;
-            this.MaterialRelationship.SelectionStart = 0;
-            this.MaterialRelationship.Size = new System.Drawing.Size(116, 23);
-            this.MaterialRelationship.TabIndex = 78;
-            this.MaterialRelationship.UseSystemPasswordChar = false;
+            this.MtlRelationship.BackColor = System.Drawing.Color.White;
+            this.MtlRelationship.Depth = 0;
+            this.MtlRelationship.Hint = "";
+            this.MtlRelationship.Location = new System.Drawing.Point(610, 25);
+            this.MtlRelationship.MouseState = MaterialSkin.MouseState.HOVER;
+            this.MtlRelationship.Name = "MtlRelationship";
+            this.MtlRelationship.PasswordChar = '\0';
+            this.MtlRelationship.SelectedText = "";
+            this.MtlRelationship.SelectionLength = 0;
+            this.MtlRelationship.SelectionStart = 0;
+            this.MtlRelationship.Size = new System.Drawing.Size(116, 23);
+            this.MtlRelationship.TabIndex = 78;
+            this.MtlRelationship.UseSystemPasswordChar = false;
             // 
-            // MaterialLastName
+            // MtlLastName
             // 
-            this.MaterialLastName.BackColor = System.Drawing.Color.White;
-            this.MaterialLastName.Depth = 0;
-            this.MaterialLastName.Hint = "";
-            this.MaterialLastName.Location = new System.Drawing.Point(336, 25);
-            this.MaterialLastName.MouseState = MaterialSkin.MouseState.HOVER;
-            this.MaterialLastName.Name = "MaterialLastName";
-            this.MaterialLastName.PasswordChar = '\0';
-            this.MaterialLastName.SelectedText = "";
-            this.MaterialLastName.SelectionLength = 0;
-            this.MaterialLastName.SelectionStart = 0;
-            this.MaterialLastName.Size = new System.Drawing.Size(187, 23);
-            this.MaterialLastName.TabIndex = 77;
-            this.MaterialLastName.UseSystemPasswordChar = false;
+            this.MtlLastName.BackColor = System.Drawing.Color.White;
+            this.MtlLastName.Depth = 0;
+            this.MtlLastName.Hint = "";
+            this.MtlLastName.Location = new System.Drawing.Point(336, 25);
+            this.MtlLastName.MouseState = MaterialSkin.MouseState.HOVER;
+            this.MtlLastName.Name = "MtlLastName";
+            this.MtlLastName.PasswordChar = '\0';
+            this.MtlLastName.SelectedText = "";
+            this.MtlLastName.SelectionLength = 0;
+            this.MtlLastName.SelectionStart = 0;
+            this.MtlLastName.Size = new System.Drawing.Size(187, 23);
+            this.MtlLastName.TabIndex = 77;
+            this.MtlLastName.UseSystemPasswordChar = false;
             // 
-            // MaterialName
+            // MtlName
             // 
-            this.MaterialName.BackColor = System.Drawing.Color.White;
-            this.MaterialName.Depth = 0;
-            this.MaterialName.Hint = "";
-            this.MaterialName.Location = new System.Drawing.Point(67, 25);
-            this.MaterialName.MouseState = MaterialSkin.MouseState.HOVER;
-            this.MaterialName.Name = "MaterialName";
-            this.MaterialName.PasswordChar = '\0';
-            this.MaterialName.SelectedText = "";
-            this.MaterialName.SelectionLength = 0;
-            this.MaterialName.SelectionStart = 0;
-            this.MaterialName.Size = new System.Drawing.Size(191, 23);
-            this.MaterialName.TabIndex = 76;
-            this.MaterialName.UseSystemPasswordChar = false;
+            this.MtlName.BackColor = System.Drawing.Color.White;
+            this.MtlName.Depth = 0;
+            this.MtlName.Hint = "";
+            this.MtlName.Location = new System.Drawing.Point(67, 25);
+            this.MtlName.MouseState = MaterialSkin.MouseState.HOVER;
+            this.MtlName.Name = "MtlName";
+            this.MtlName.PasswordChar = '\0';
+            this.MtlName.SelectedText = "";
+            this.MtlName.SelectionLength = 0;
+            this.MtlName.SelectionStart = 0;
+            this.MtlName.Size = new System.Drawing.Size(191, 23);
+            this.MtlName.TabIndex = 76;
+            this.MtlName.UseSystemPasswordChar = false;
             // 
             // label7
             // 
@@ -221,32 +221,32 @@
             this.label6.TabIndex = 72;
             this.label6.Text = "Email";
             // 
-            // MaterialEmail
+            // MtlEmail
             // 
-            this.MaterialEmail.BackColor = System.Drawing.Color.White;
-            this.MaterialEmail.Depth = 0;
-            this.MaterialEmail.Hint = "";
-            this.MaterialEmail.Location = new System.Drawing.Point(293, 54);
-            this.MaterialEmail.MouseState = MaterialSkin.MouseState.HOVER;
-            this.MaterialEmail.Name = "MaterialEmail";
-            this.MaterialEmail.PasswordChar = '\0';
-            this.MaterialEmail.SelectedText = "";
-            this.MaterialEmail.SelectionLength = 0;
-            this.MaterialEmail.SelectionStart = 0;
-            this.MaterialEmail.Size = new System.Drawing.Size(185, 23);
-            this.MaterialEmail.TabIndex = 80;
-            this.MaterialEmail.UseSystemPasswordChar = false;
+            this.MtlEmail.BackColor = System.Drawing.Color.White;
+            this.MtlEmail.Depth = 0;
+            this.MtlEmail.Hint = "";
+            this.MtlEmail.Location = new System.Drawing.Point(293, 54);
+            this.MtlEmail.MouseState = MaterialSkin.MouseState.HOVER;
+            this.MtlEmail.Name = "MtlEmail";
+            this.MtlEmail.PasswordChar = '\0';
+            this.MtlEmail.SelectedText = "";
+            this.MtlEmail.SelectionLength = 0;
+            this.MtlEmail.SelectionStart = 0;
+            this.MtlEmail.Size = new System.Drawing.Size(185, 23);
+            this.MtlEmail.TabIndex = 80;
+            this.MtlEmail.UseSystemPasswordChar = false;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(484, 61);
+            this.label8.Location = new System.Drawing.Point(497, 61);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 16);
+            this.label8.Size = new System.Drawing.Size(52, 16);
             this.label8.TabIndex = 74;
-            this.label8.Text = "idStudent";
+            this.label8.Text = "Student";
             // 
             // cbStudent
             // 
@@ -261,6 +261,7 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.Depth = 0;
             this.btnEliminar.Location = new System.Drawing.Point(213, 140);
             this.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER;
@@ -274,8 +275,9 @@
             // 
             // btnModificar
             // 
+            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnModificar.Depth = 0;
-            this.btnModificar.Location = new System.Drawing.Point(112, 140);
+            this.btnModificar.Location = new System.Drawing.Point(114, 140);
             this.btnModificar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Primary = true;
@@ -287,6 +289,7 @@
             // 
             // btnAgregar
             // 
+            this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregar.Depth = 0;
             this.btnAgregar.Location = new System.Drawing.Point(15, 140);
             this.btnAgregar.MouseState = MaterialSkin.MouseState.HOVER;
@@ -308,13 +311,13 @@
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.cbStudent);
-            this.Controls.Add(this.MaterialPhone);
+            this.Controls.Add(this.MtlPhone);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.MaterialEmail);
-            this.Controls.Add(this.MaterialAddress);
-            this.Controls.Add(this.MaterialRelationship);
-            this.Controls.Add(this.MaterialLastName);
-            this.Controls.Add(this.MaterialName);
+            this.Controls.Add(this.MtlEmail);
+            this.Controls.Add(this.MtlAddress);
+            this.Controls.Add(this.MtlRelationship);
+            this.Controls.Add(this.MtlLastName);
+            this.Controls.Add(this.MtlName);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
@@ -336,18 +339,18 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private MaterialSkin.Controls.MaterialDivider materialDivider2;
-        private MaterialSkin.Controls.MaterialSingleLineTextField MaterialPhone;
+        private MaterialSkin.Controls.MaterialSingleLineTextField MtlPhone;
         private System.Windows.Forms.Label label5;
-        private MaterialSkin.Controls.MaterialSingleLineTextField MaterialAddress;
-        private MaterialSkin.Controls.MaterialSingleLineTextField MaterialRelationship;
-        private MaterialSkin.Controls.MaterialSingleLineTextField MaterialLastName;
-        private MaterialSkin.Controls.MaterialSingleLineTextField MaterialName;
+        private MaterialSkin.Controls.MaterialSingleLineTextField MtlAddress;
+        private MaterialSkin.Controls.MaterialSingleLineTextField MtlRelationship;
+        private MaterialSkin.Controls.MaterialSingleLineTextField MtlLastName;
+        private MaterialSkin.Controls.MaterialSingleLineTextField MtlName;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
-        private MaterialSkin.Controls.MaterialSingleLineTextField MaterialEmail;
+        private MaterialSkin.Controls.MaterialSingleLineTextField MtlEmail;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbStudent;
         private MaterialSkin.Controls.MaterialRaisedButton btnEliminar;

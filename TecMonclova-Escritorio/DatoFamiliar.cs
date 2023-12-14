@@ -40,49 +40,49 @@ namespace TecMonclova_Escritorio
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            string name = MaterialName.Text;
-            string lastName = MaterialLastName.Text;
-            string relationship = MaterialRelationship.Text;
-            string phoneNumber = MaterialPhone.Text;
-            string email = MaterialEmail.Text;
-            string address = MaterialAddress.Text;
+            string name = MtlName.Text;
+            string lastName = MtlLastName.Text;
+            string relationship = MtlRelationship.Text;
+            string phoneNumber = MtlPhone.Text;
+            string email = MtlEmail.Text;
+            string address = MtlAddress.Text;
             string[] x = cbStudent.Text.Split('-');
             string idStudent = x[0];
             consulta = "INSERT INTO FamilyData(name, lastName, relationship, phoneNumber, email, address, idStudent) values('" + name + "', '" + lastName + "', '" + relationship + "', '" + phoneNumber + "', '" + email + "', '" + address + "', '" + idStudent + "')";
             Conn.ejecutaConsulta(consulta);
             MostrarDatos();
 
-            MaterialName.Clear();
-            MaterialLastName.Clear();
-            MaterialRelationship.Clear();
-            MaterialPhone.Clear();
-            MaterialEmail.Clear();
-            MaterialAddress.Clear();
+            MtlName.Clear();
+            MtlLastName.Clear();
+            MtlRelationship.Clear();
+            MtlPhone.Clear();
+            MtlEmail.Clear();
+            MtlAddress.Clear();
             cbStudent.Text = "";
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            string name = MaterialName.Text;
-            string lastName = MaterialLastName.Text;
-            string relationship = MaterialRelationship.Text;
-            string phoneNumber = MaterialPhone.Text;
-            string email = MaterialEmail.Text;
-            string address = MaterialAddress.Text;
+            string name = MtlName.Text;
+            string lastName = MtlLastName.Text;
+            string relationship = MtlRelationship.Text;
+            string phoneNumber = MtlPhone.Text;
+            string email = MtlEmail.Text;
+            string address = MtlAddress.Text;
             string[] x = cbStudent.Text.Split('-');
             string idStudent = x[0];
             int a = dataGridView1.CurrentCell.RowIndex;
             int idFamilyData = (int)dataGridView1.Rows[a].Cells[0].Value;
-            consulta = "UPDATE FamilyData SET name = '" + name + "', lastName = '" + lastName + "',relationship = '" + relationship + "' ,phoneNumber = '" + phoneNumber + "',email = '" + email + "', address = '" + address + "', idStudent = '" + idStudent + "' WHERE idFamilyData = " + idFamilyData.ToString();
+            consulta = "UPDATE FamilyData SET name = '" + name + "', lastName = '" + lastName + "',relationship = '" + relationship + "' ,phoneNumber = '" + phoneNumber + "',email = '" + email + "', address = '" + address + "', idStudent = '" + idStudent + "' WHERE idFamilyData = " + idFamilyData;
             Conn.ejecutaConsulta(consulta);
             MostrarDatos();
 
-            MaterialName.Clear();
-            MaterialLastName.Clear();
-            MaterialRelationship.Clear();
-            MaterialPhone.Clear();
-            MaterialEmail.Clear();
-            MaterialAddress.Clear();
+            MtlName.Clear();
+            MtlLastName.Clear();
+            MtlRelationship.Clear();
+            MtlPhone.Clear();
+            MtlEmail.Clear();
+            MtlAddress.Clear();
             cbStudent.Text = "";
         }
 
@@ -90,7 +90,7 @@ namespace TecMonclova_Escritorio
         {
             int a = dataGridView1.CurrentCell.RowIndex;
             int idFamilyData = (int)dataGridView1.Rows[a].Cells[0].Value;
-            consulta = "UPDATE FamilyData SET Status = 0 WHERE idFamilyData =  " + idFamilyData.ToString(); ;
+            consulta = "UPDATE FamilyData SET Status = 0 WHERE idFamilyData =  " + idFamilyData;
             Conn.ejecutaConsulta(consulta);
             MostrarDatos();
         }
@@ -102,12 +102,12 @@ namespace TecMonclova_Escritorio
             {
                 int x = dataGridView1.CurrentCell.RowIndex;
 
-                MaterialName.Text = dataGridView1.Rows[x].Cells[1].Value.ToString();
-                MaterialLastName.Text = dataGridView1.Rows[x].Cells[2].Value.ToString();
-                MaterialRelationship.Text = dataGridView1.Rows[x].Cells[3].Value.ToString();
-                MaterialPhone.Text = dataGridView1.Rows[x].Cells[5].Value.ToString();
-                MaterialEmail.Text = dataGridView1.Rows[x].Cells[6].Value.ToString();
-                MaterialAddress.Text = dataGridView1.Rows[x].Cells[7].Value.ToString();
+                MtlName.Text = dataGridView1.Rows[x].Cells[1].Value.ToString();
+                MtlLastName.Text = dataGridView1.Rows[x].Cells[2].Value.ToString();
+                MtlRelationship.Text = dataGridView1.Rows[x].Cells[3].Value.ToString();
+                MtlPhone.Text = dataGridView1.Rows[x].Cells[5].Value.ToString();
+                MtlEmail.Text = dataGridView1.Rows[x].Cells[6].Value.ToString();
+                MtlAddress.Text = dataGridView1.Rows[x].Cells[7].Value.ToString();
                 for (int i = 0; i < cbStudent.Items.Count; i++)
                 {
                     string[] a = cbStudent.Items[i].ToString().Split('-');
