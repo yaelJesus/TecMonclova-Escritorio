@@ -151,7 +151,7 @@ namespace TecMonclova_Escritorio
             {
                 if (txtuser.Text != "Contraseña")
                 {
-                    bool validar = Login(txtuser.Text, txtpass.Text);
+                    bool validar = Conn.ejecutaConsultaLogin(txtuser.Text, txtpass.Text);
                     if (validar)
                     {
                         Form1 menu = new Form1();

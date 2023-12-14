@@ -49,6 +49,25 @@ namespace TecMonclova_Escritorio
             conexion.Close();
         }
 
+        public static bool ejecutaConsultaLogin(string user, string pass)
+        {
+            conectar();
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexion;
+            comando.CommandText = "select * from [User] where (userName = @user and password = @pass) or (email = @user and password = @pass)";
+            comando.Parameters.AddWithValue("@user", user);
+            comando.Parameters.AddWithValue("@pass", pass);
+            comando.CommandType = CommandType.Text;
+            SqlDataReader reader = comando.ExecuteReader();
+            if (reader.HasRows)
+            {
+                conexion.Close();
+                return true;
+            }
+            else
+                conexion.Close(); return false;
+        }
+
         internal static string GetConnectionString()
         {
             //throw new NotImplementedException();
