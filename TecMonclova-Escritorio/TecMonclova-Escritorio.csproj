@@ -131,6 +131,12 @@
     <Compile Include="SeguroVida.Designer.cs">
       <DependentUpon>SeguroVida.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario.Designer.cs">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Alumno.resx">
       <DependentUpon>Alumno.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,6 +182,9 @@
     </Compile>
     <EmbeddedResource Include="SeguroVida.resx">
       <DependentUpon>SeguroVida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario.resx">
+      <DependentUpon>Usuario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
