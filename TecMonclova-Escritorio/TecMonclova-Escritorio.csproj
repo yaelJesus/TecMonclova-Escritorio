@@ -117,6 +117,7 @@
     <Compile Include="Inscripcion.Designer.cs">
       <DependentUpon>Inscripcion.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserCache.cs" />
     <Compile Include="Periodo.cs">
       <SubType>Form</SubType>
     </Compile>

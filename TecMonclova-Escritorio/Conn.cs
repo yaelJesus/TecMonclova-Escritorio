@@ -61,6 +61,14 @@ namespace TecMonclova_Escritorio
             SqlDataReader reader = comando.ExecuteReader();
             if (reader.HasRows)
             {
+                while (reader.Read())
+                {
+                    UserCache.IdUser = reader.GetInt32(0);
+                    UserCache.UserName = reader.GetString(1);
+                    UserCache.Name = reader.GetString(2);
+                    UserCache.Password = reader.GetString(3);
+                    UserCache.Email = reader.GetString(4);
+                }
                 conexion.Close();
                 return true;
             }
