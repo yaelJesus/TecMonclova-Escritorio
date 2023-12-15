@@ -95,7 +95,7 @@
             this.btnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuario.ForeColor = System.Drawing.Color.DimGray;
-            this.btnUsuario.IconChar = FontAwesome.Sharp.IconChar.Pix;
+            this.btnUsuario.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
             this.btnUsuario.IconColor = System.Drawing.Color.DimGray;
             this.btnUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnUsuario.IconSize = 30;
@@ -118,7 +118,7 @@
             this.btnSeguroVida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeguroVida.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeguroVida.ForeColor = System.Drawing.Color.DimGray;
-            this.btnSeguroVida.IconChar = FontAwesome.Sharp.IconChar.Pix;
+            this.btnSeguroVida.IconChar = FontAwesome.Sharp.IconChar.Crutch;
             this.btnSeguroVida.IconColor = System.Drawing.Color.DimGray;
             this.btnSeguroVida.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSeguroVida.IconSize = 30;
@@ -141,7 +141,7 @@
             this.btnPeriodo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPeriodo.ForeColor = System.Drawing.Color.DimGray;
-            this.btnPeriodo.IconChar = FontAwesome.Sharp.IconChar.Pix;
+            this.btnPeriodo.IconChar = FontAwesome.Sharp.IconChar.Calendar;
             this.btnPeriodo.IconColor = System.Drawing.Color.DimGray;
             this.btnPeriodo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPeriodo.IconSize = 30;
@@ -164,7 +164,7 @@
             this.btnInscripcion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInscripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInscripcion.ForeColor = System.Drawing.Color.DimGray;
-            this.btnInscripcion.IconChar = FontAwesome.Sharp.IconChar.Pix;
+            this.btnInscripcion.IconChar = FontAwesome.Sharp.IconChar.SheetPlastic;
             this.btnInscripcion.IconColor = System.Drawing.Color.DimGray;
             this.btnInscripcion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnInscripcion.IconSize = 30;
@@ -187,7 +187,7 @@
             this.btnEducacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEducacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEducacion.ForeColor = System.Drawing.Color.DimGray;
-            this.btnEducacion.IconChar = FontAwesome.Sharp.IconChar.Pix;
+            this.btnEducacion.IconChar = FontAwesome.Sharp.IconChar.Book;
             this.btnEducacion.IconColor = System.Drawing.Color.DimGray;
             this.btnEducacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEducacion.IconSize = 30;
@@ -210,7 +210,7 @@
             this.btnDetalleBecaInterna.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetalleBecaInterna.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetalleBecaInterna.ForeColor = System.Drawing.Color.DimGray;
-            this.btnDetalleBecaInterna.IconChar = FontAwesome.Sharp.IconChar.Pix;
+            this.btnDetalleBecaInterna.IconChar = FontAwesome.Sharp.IconChar.PersonWalkingArrowLoopLeft;
             this.btnDetalleBecaInterna.IconColor = System.Drawing.Color.DimGray;
             this.btnDetalleBecaInterna.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDetalleBecaInterna.IconSize = 30;
@@ -220,7 +220,7 @@
             this.btnDetalleBecaInterna.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnDetalleBecaInterna.Size = new System.Drawing.Size(220, 32);
             this.btnDetalleBecaInterna.TabIndex = 24;
-            this.btnDetalleBecaInterna.Text = "Detalle Beca Interna";
+            this.btnDetalleBecaInterna.Text = "Becario Interno";
             this.btnDetalleBecaInterna.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDetalleBecaInterna.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDetalleBecaInterna.UseVisualStyleBackColor = true;
@@ -233,7 +233,7 @@
             this.btnDetalleBecaExterna.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetalleBecaExterna.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetalleBecaExterna.ForeColor = System.Drawing.Color.DimGray;
-            this.btnDetalleBecaExterna.IconChar = FontAwesome.Sharp.IconChar.Pix;
+            this.btnDetalleBecaExterna.IconChar = FontAwesome.Sharp.IconChar.PeopleArrowsLeftRight;
             this.btnDetalleBecaExterna.IconColor = System.Drawing.Color.DimGray;
             this.btnDetalleBecaExterna.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDetalleBecaExterna.IconSize = 30;
@@ -243,7 +243,7 @@
             this.btnDetalleBecaExterna.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnDetalleBecaExterna.Size = new System.Drawing.Size(220, 32);
             this.btnDetalleBecaExterna.TabIndex = 23;
-            this.btnDetalleBecaExterna.Text = "Detalle Beca Externa";
+            this.btnDetalleBecaExterna.Text = "Becario Externo";
             this.btnDetalleBecaExterna.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDetalleBecaExterna.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDetalleBecaExterna.UseVisualStyleBackColor = true;
@@ -256,7 +256,7 @@
             this.btnDatoFamiliar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDatoFamiliar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDatoFamiliar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnDatoFamiliar.IconChar = FontAwesome.Sharp.IconChar.Pix;
+            this.btnDatoFamiliar.IconChar = FontAwesome.Sharp.IconChar.PersonShelter;
             this.btnDatoFamiliar.IconColor = System.Drawing.Color.DimGray;
             this.btnDatoFamiliar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDatoFamiliar.IconSize = 30;
@@ -279,7 +279,7 @@
             this.btnBecaInstitucional.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBecaInstitucional.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBecaInstitucional.ForeColor = System.Drawing.Color.DimGray;
-            this.btnBecaInstitucional.IconChar = FontAwesome.Sharp.IconChar.Pix;
+            this.btnBecaInstitucional.IconChar = FontAwesome.Sharp.IconChar.School;
             this.btnBecaInstitucional.IconColor = System.Drawing.Color.DimGray;
             this.btnBecaInstitucional.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBecaInstitucional.IconSize = 30;
@@ -302,7 +302,7 @@
             this.btnBecaExterna.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBecaExterna.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBecaExterna.ForeColor = System.Drawing.Color.DimGray;
-            this.btnBecaExterna.IconChar = FontAwesome.Sharp.IconChar.PeopleGroup;
+            this.btnBecaExterna.IconChar = FontAwesome.Sharp.IconChar.MoneyCheck;
             this.btnBecaExterna.IconColor = System.Drawing.Color.DimGray;
             this.btnBecaExterna.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBecaExterna.IconSize = 30;
